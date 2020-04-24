@@ -1,0 +1,13 @@
+# Build
+ARG JAVA_VERSION=11-jdk-slim
+FROM openjdk:${JAVA_VERSION} as BUILD
+
+# Distribute
+FROM openjdk:${JAVA_VERSION}
+RUN mkdir /home/app
+RUN mkdir /home/app/config
+COPY config/logback-spring.xml /home/app/config/logback-spring.xml
+COPY config/consumer.application.properties /home/app/config/application.properties
+COPY consumer/target/service-jar-with-dependencies.jar /home/app/service.jar
+RUN ls -l /home/app/config
+CMD ["java",  "-Dlogback.configurationFile=/home/app/config/logback-spring.xml", "-jar", "/home/app/service.jar", "--CONFIG_PATH=///home/app/config/"]
