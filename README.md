@@ -1,4 +1,3 @@
-# cybercube
 Experimental PoC playing around with Spring Boot 2 microservices, Apache Kafka as a Queue and REDIS as a cache all built and run with Docker. Inclues OpenAPI spec APIs and Swagger-UI for testing + Embedded Kafka in IT tests.
 
 ## PROJECT KEY POINTS
