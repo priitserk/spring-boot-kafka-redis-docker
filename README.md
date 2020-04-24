@@ -14,7 +14,6 @@ Please execute mvn clean package in prior to that (Step by step example in the P
     Spring Boot & Swagger
 * APISs by OpenAPI 3.0 standard
 * all configuration externalized, both logback and application.properties for microservices.
-* No sout as specified in the assignment - logging to console done through logback configuration
 * Developed and tested on Windows using  
 -- OpenJDK Runtime Environment AdoptOpenJDK (build 11.0.3+7)  
 -- Apache Maven 3.6.2  
